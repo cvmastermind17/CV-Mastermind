@@ -1,398 +1,686 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>CV Mastermind</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>CV Mastermind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="سيرة ذاتية, تصميم سيرة ذاتية, توظيف">
+    <meta name="description" content="متخصصون في تصميم السير الذاتية الاحترافية">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <style>
+        :root {
+            --primary: #f5ff00;  /* اللون الأصفر */
+            --dark: #000000;     /* اللون الأسود */
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            background-color: white;
+            color: var(--dark);
+        }
+        
+        /* حدود عامة بين الأقسام */
+        section {
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: var(--dark) !important;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary) !important;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+        
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: var(--dark);
+            color: white;
+            padding: 120px 0 80px;
+        }
+        
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .hero-text .typed-text {
+            color: #ccc;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        
+        .hero-btn a {
+            background: var(--primary);
+            color: var(--dark) !important;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 1px solid var(--primary);
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .hero-btn a:hover {
+            background: transparent;
+            color: var(--primary) !important;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(245, 255, 0, 0.3);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-text a {
+            color: var(--primary) !important;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* Services */
+        .service {
+            background-color: var(--dark);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .service-item {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            border: 1px solid var(--primary);
+            height: 100%;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(245, 255, 0, 0.2);
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .service-icon i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-header h2 {
+            position: relative;
+            padding-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            bottom: 0;
+            right: 0;
+            background-color: var(--primary);
+        }
+        
+        /* Portfolio */
+        .portfolio {
+            padding: 80px 0;
+            background: rgb(0, 0, 0);
+            color: var(--dark);
+        }
+        
+        /* Banner */
+        .banner {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .banner h2 {
+            color: var(--primary);
+        }
+        
+        .banner h2 span {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 0 15px;
+            border-radius: 5px;
+        }
+        
+        .banner-text {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: 1px solid var(--primary);
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .banner-text .btn {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            margin: 5px;
+        }
+        
+        .banner-text .btn:hover {
+            background: var(--primary);
+            color: var(--dark);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            border-bottom: none !important;
+        }
+        
+        .footer-social a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .footer-social a:hover {
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            color: #aaa;
+        }
+        
+        .copyright a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+                text-align: center;
+            }
+            
+            .hero-image {
+                margin-top: 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .section-header h2::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            
+            .navbar-nav {
+                padding: 10px 0;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0 40px;
+            }
+            
+            .hero-btn a {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .hero-image img {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">CV Mastermind</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Nav Bar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">CV Mastermind</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#service" class="nav-link">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">اراء العملاء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#offers" class="nav-link">العروض</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav Bar End -->
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">الصفحة الرئيسية</a>
-                        <a href="#about" class="nav-item nav-link">من نحن</a>
-                        <a href="#service" class="nav-item nav-link">خدماتنا</a>
-                        <a href="#portfolio" class="nav-item nav-link">اراء العملاء</a>
-                        <a href="#offers" class="nav-item nav-link">العروض</a>
-                        <a href="#contact" class="nav-item nav-link">تواصل معنا</a>
+    <!-- Hero Start -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1>مرحبًا بكم!</h1>
+                            <div class="typed-text">نحن هنا لمساعدتكم في إنشاء سير ذاتية متميزة واحترافية</div>
+                        </div>
+                        <div class="hero-btn mt-4">
+                            <a href="https://m.me/61556487670336" class="btn">
+                                <i class="fab fa-facebook-messenger"></i> تواصل معنا
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="img/logo-no-background.png" alt="Hero Image" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Nav Bar End -->
+    </section>
+    <!-- Hero End -->
 
-
-        <!-- Hero Start -->
-        <div class="hero" id="home">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <h1>مرحبًا بكم!</h1>
-                                <h2></h2>
-                                <div class="typed-text">نحن هنا لمساعدتكم في إنشاء سير ذاتية متميزة واحترافية. تفضلوا بزيارتنا للمزيد من المعلومات وللاطلاع على أعمالنا.</div>
-
-                            </div>
-                            <div class="hero-btn">
-                                <a href="https://m.me/61556487670336" style="color: white;">
-                                    <i class="fab fa-facebook-messenger"></i>&nbsp; تواصل معنا
-                                </a>                            </div>
+    <!-- About Start -->
+    <section class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-10">
+                    <div class="about-content">
+                        <div class="section-header text-right">
+                            <h2>متخصصون في صناعة السير الذاتية</h2>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="img/logo-no-background.png" alt="Logo Image">
+                        <div class="about-text">
+                            <p>
+                                نحن فريق محترف متخصص في تقديم خدمات صناعة السير الذاتية بجميع أنواعها ولغاتها، لضمان تلبية احتياجاتكم الشخصية والمهنية. نسعى دائماً لتقديم خدمات ذات جودة عالية وبأسعار تنافسية، لنساعدكم في تحقيق أهدافكم المهنية.
+                            </p>
+                            <p>
+                                خدماتنا تشمل:
+                            </p>
+                            <p>
+                                .تصميم وإنشاء سير ذاتية احترافية تناسب جميع المجالات<br>
+                                .(Cover Letter) كتابة خطابات التعريف المخصصة لدعم طلبات التوظيف<br>
+                                .(Letter Head) تصميم الخطابات التي تعكس الهوية البصرية الخاصة بكم<br>
+                                .(Logo) تصميم شعارات متميزة وفريدة تعبر عن علامتكم التجارية<br>
+                                .(Presentation) إعداد عروض تقديمية احترافية تلبي احتياجاتكم العملية والتعليمية<br>
+                                .(Websites) تصميم مواقع الكترونية
+                            </p>
+                            <p>
+                                .نحن هنا لنساعدكم في كل خطوة على الطريق، من بدء فكرة السيرة الذاتية إلى تحسينها وتقديمها بالشكل الأمثل. تفضلوا بزيارة صفحتنا للمزيد من المعلومات وللاطلاع على أمثلة من أعمالنا
+                            </p>
+                            <p>
+                                <a href="https://www.facebook.com/profile.php?id=61556487670336">
+                                    <i class="fab fa-facebook"></i>&nbsp; زيارة الصفحة على فيسبوك
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
-
-
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-            <div class="container-fluid" style="background-color: black;">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="img/logo-no-background.png" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-content" style="text-align: right;">
-                            <div class="section-header text-right">
-                                <h2 style="color: white;">متخصصون في صناعة السير الذاتية</h2>
-                            </div>
-                            <div class="about-text" style="color: white;">
-                                <p>
-                                    نحن فريق محترف متخصص في تقديم خدمات صناعة السير الذاتية بجميع أنواعها ولغاتها، لضمان تلبية احتياجاتكم الشخصية والمهنية. نسعى دائماً لتقديم خدمات ذات جودة عالية وبأسعار تنافسية، لنساعدكم في تحقيق أهدافكم المهنية.
-                                </p>
-                                <p>
-                                    خدماتنا تشمل:
-                                </p>
-                                <p>
-                                    .تصميم وإنشاء سير ذاتية احترافية تناسب جميع المجالات<br>
-                                    .(Cover Letter) كتابة خطابات التعريف المخصصة لدعم طلبات التوظيف<br>
-                                    .(Letter Head) تصميم الخطابات التي تعكس الهوية البصرية الخاصة بكم<br>
-                                    .(Logo) تصميم شعارات متميزة وفريدة تعبر عن علامتكم التجارية<br>
-                                    .(Presentation) إعداد عروض تقديمية احترافية تلبي احتياجاتكم العملية والتعليمية<br>
-                                    .(Websites) تصميم مواقع الكترونية
-                                </p>
-                                <p>
-                                    .نحن هنا لنساعدكم في كل خطوة على الطريق، من بدء فكرة السيرة الذاتية إلى تحسينها وتقديمها بالشكل الأمثل. تفضلوا بزيارة صفحتنا للمزيد من المعلومات وللاطلاع على أمثلة من أعمالنا
-                                </p>
-                                <p>
-                                    <a href="https://www.facebook.com/profile.php?id=61556487670336" style="color: white;">
-                                        <i class="fab fa-facebook"></i>&nbsp; زيارة الصفحة على فيسبوك
-                                    </a>
-                                </p>
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+    </section>
+    <!-- About End -->
+    
+    <!-- Service Start -->
+    <section class="service" id="service">
+        <div class="container">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>ماذا نقدم</p>
+                <h2>خدمات بجودة رائعة</h2>
             </div>
-        </div>
-        
-        <!-- About End -->
-        
-        
-        <!-- Service Start -->
-        <div style="background-color: black;" class="service" id="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p style="color: black;">ماذا نقدم</p>
-                    <h2 style="color: rgb(255, 255, 255);">خدمات بجودة رائعة</h2>
+            <div class="row">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-id-card"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>عمل جميع أنواع السير الذاتية</h3>
+                            <p>
+                                .نقدم خدمة إنشاء جميع أنواع السير الذاتية بشكل احترافي لجذب اهتمام أصحاب العمل
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-id-card"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>عمل جميع أنواع السير الذاتية</h3>
-                                <p>
-                                    .نقدم خدمة إنشاء جميع أنواع السير الذاتية بشكل احترافي لجذب اهتمام أصحاب العمل
-                                </p>
-                            </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-laptop-code"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>تصميم المواقع</h3>
+                            <p>
+                                .نقدم خدمة تصميم مواقع ويب مبتكرة وفعالة تلبي احتياجات عملك 
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop-code"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>تصميم المواقع</h3>
-                                <p>
-                                    .نقدم خدمة تصميم مواقع ويب مبتكرة وفعالة تلبي احتياجات عملك 
-                                </p>
-                            </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-paint-brush"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>تصميم اللوجوهات</h3>
+                            <p>
+                                .نصمم لوجوهات فريدة تعبر عن هوية وشخصية علامتك التجارية
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-paint-brush"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>تصميم اللوجوهات</h3>
-                                <p>
-                                    .نصمم لوجوهات فريدة تعبر عن هوية وشخصية علامتك التجارية
-                                </p>
-                            </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-file-alt"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3> Cover Letter و Letter Head تصميم</h3>
+                            <p>
+                                .نصمم لك خطابات التغطية وورق المراسلات بأعلى جودة وبشكل احترافي
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-file-alt"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3> Cover Letter و Letter Head تصميم</h3>
-                                <p>
-                                    .نصمم لك خطابات التغطية وورق المراسلات بأعلى جودة وبشكل احترافي
-                                </p>
-                            </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-sync-alt"></i>
+                        </div>
+                        <div class="service-text">
+                            <h3>تعديل وتحديث السير الذاتية</h3>
+                            <p>
+                                .نقدم خدمة تعديل وتحديث السير الذاتية لتكون مواكبة لأحدث المعايير
+                            </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-sync-alt"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>تعديل وتحديث السير الذاتية</h3>
-                                <p>
-                                    .نقدم خدمة تعديل وتحديث السير الذاتية لتكون مواكبة لأحدث المعايير
-                                </p>
-                            </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="1.0s">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fab fa-linkedin"></i>
                         </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="1.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>إنشاء حسابات لينكد إن احترافية</h3>
-                                <p>
-                                    .نساعدك في إنشاء حساب لينكد إن احترافي لجذب المزيد من الفرص الوظيفية
-                                </p>
-                            </div>
+                        <div class="service-text">
+                            <h3>إنشاء حسابات لينكد إن احترافية</h3>
+                            <p>
+                                .نساعدك في إنشاء حساب لينكد إن احترافي لجذب المزيد من الفرص الوظيفية
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Service End -->
-        
-        
-        
-        
-        <!-- Banner Start -->
-        <!-- <div class="banner wow zoomIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>أسعار معقولة</p>
-                    <h2>احصل على <span>سعر خاص</span></h2>
-                </div>
-                <div class="container banner-text">
-                    <p>
-                        نحن نقدم أسعارًا مناسبة وخاصة لجودة خدماتنا. لوريم ايبسوم دولور سيت أميت، كونسيكتور أديبيسسينغ إليت. فايل الخاص بك أورنار فيليت نون فولبوتات. الإيقاع أن تورتور، أكتور إيد جرافيدا كونديمنتوم، فيفيرا كويس سيم.
-                    </p>
-                    <a class="btn" href="#reviews">شاهد التقييمات</a>
+    </section>
+    <!-- Service End -->
+    
+    <!-- Portfolio Start -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>آراء العملاء</p>
+                <h2>تجارب عملائنا</h2>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul id="portfolio-filter" class="list-unstyled text-center">
+                        <li data-filter="*" class="filter-active d-inline-block mx-3"><i class="fas fa-comments"></i> <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02QDhnGrVr5MdKFgGYiUu88ynWcF1xSNyxJoFy1QHFjLj4KMDX8vNVeZX2WNTwQaMVl&id=61556487670336" class="text-white">رابط التعليقات</a></li>
+                        <li data-filter=".filter-1" class="filter-active d-inline-block mx-3"><i class="fas fa-star"></i> <a href="https://www.facebook.com/profile.php?id=61556487670336&sk=reviews" class="text-white">رابط التقييمات</a></li>
+                    </ul>
                 </div>
             </div>
-        </div> -->
-        <!-- Banner End -->
-
-
-        <!-- Portfolio Start -->
-        <div class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p style="color: rgb(0, 0, 0);">آراء العملاء</p>
-                    <h2>تجارب عملائنا</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul id="portfolio-filter">
-                            <li data-filter="*" class="filter-active"><i class="fas fa-comments"></i> <a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02QDhnGrVr5MdKFgGYiUu88ynWcF1xSNyxJoFy1QHFjLj4KMDX8vNVeZX2WNTwQaMVl&id=61556487670336">رابط التعليقات</a></li>
-                            <li data-filter=".filter-1" class="filter-active"><i class="fas fa-star"></i> <a href="https://www.facebook.com/profile.php?id=61556487670336&sk=reviews">رابط التقييمات</a></li>
-                        </ul>
-                    </div>
-                    
-                    
-                </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/Screenshot_20240524_155353_com.facebook.katana_edit_339676714862229.jpg" alt="Image">
-                            </div>
-                            <a class="btn" href="img/Screenshot_20240524_155353_com.facebook.katana_edit_339676714862229.jpg" data-lightbox="portfolio">
-                                    <i class="fas fa-search-plus"></i> <!-- هنا أيقونة الـ zoom -->
-                            </a>                            
+            <div class="row portfolio-container mt-4">
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="img/Screenshot_20240524_155353_com.facebook.katana_edit_339676714862229.jpg" alt="Image" class="img-fluid">
                         </div>
+                        <a class="btn" href="img/Screenshot_20240524_155353_com.facebook.katana_edit_339676714862229.jpg" data-lightbox="portfolio">
+                            <i class="fas fa-search-plus"></i>
+                        </a>                            
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/Screenshot_20240524_155521.jpg" alt="Image">
-                            </div>
-                            <a class="btn" href="img/Screenshot_20240524_155521.jpg" data-lightbox="portfolio">
-                                <i class="fas fa-search-plus"></i> <!-- هنا أيقونة الـ zoom -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="img/Screenshot_20240524_155521.jpg" alt="Image" class="img-fluid">
+                        </div>
+                        <a class="btn" href="img/Screenshot_20240524_155521.jpg" data-lightbox="portfolio">
+                            <i class="fas fa-search-plus"></i>
                         </a>
                     </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/Screenshot_20240524_155539_com.facebook.katana_edit_339892177594487.jpg" alt="Image">
-                            </div>
-                            <a class="btn" href="img/Screenshot_20240524_155539_com.facebook.katana_edit_339892177594487.jpg" data-lightbox="portfolio">
-                                <i class="fas fa-search-plus"></i> <!-- هنا أيقونة الـ zoom -->
-                            </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="img/Screenshot_20240524_155539_com.facebook.katana_edit_339892177594487.jpg" alt="Image" class="img-fluid">
                         </div>
+                        <a class="btn" href="img/Screenshot_20240524_155539_com.facebook.katana_edit_339892177594487.jpg" data-lightbox="portfolio">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/Screenshot_20240524_155640.jpg" alt="Image">
-                            </div>
-                            <a class="btn" href="img/Screenshot_20240524_155640.jpg" data-lightbox="portfolio">
-                                <i class="fas fa-search-plus"></i> <!-- هنا أيقونة الـ zoom -->
-                            </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="img/Screenshot_20240524_155640.jpg" alt="Image" class="img-fluid">
                         </div>
+                        <a class="btn" href="img/Screenshot_20240524_155640.jpg" data-lightbox="portfolio">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/Screenshot_20240524_155723.jpg" alt="Image">
-                            </div>
-                            <a class="btn" href="img/Screenshot_20240524_155723.jpg" data-lightbox="portfolio">
-                                <i class="fas fa-search-plus"></i> <!-- هنا أيقونة الـ zoom -->
-                            </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="img/Screenshot_20240524_155723.jpg" alt="Image" class="img-fluid">
                         </div>
+                        <a class="btn" href="img/Screenshot_20240524_155723.jpg" data-lightbox="portfolio">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/Screenshot_20240524_155941.jpg" alt="Image">
-                            </div>
-                            <a class="btn" href="img/Screenshot_20240524_155941.jpg" data-lightbox="portfolio">
-                                <i class="fas fa-search-plus"></i> <!-- هنا أيقونة الـ zoom -->
-                            </a>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+                    <div class="portfolio-wrap">
+                        <div class="portfolio-img">
+                            <img src="img/Screenshot_20240524_155941.jpg" alt="Image" class="img-fluid">
                         </div>
+                        <a class="btn" href="img/Screenshot_20240524_155941.jpg" data-lightbox="portfolio">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Portfolio End -->
-        
-        
-        <!-- Banner Start -->
-        <div id="offers" class="banner wow zoomIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p style="color: white;">عرض رائع</p>
-                    <h2 style="color: white;">احصل على <span style="background-color: white; color: #333;">30%</span> خصم</h2>
-                </div>
-                <div class="container banner-text" style="background-color: white;">
-                    <p style="color: #333;">
-                        خصم 30% للأشخاص اللذين يقومون بمتابعتنا والتفاعل معنا على الإنستجرام والفيسبوك وتويتر
-                    </p>
-                    <a class="btn" href="#" style="background-color: transparent; color: #000000;"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a class="btn" href="#" style="background-color: transparent; color: #000000;"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a class="btn" href="#" style="background-color: transparent; color: #000000;"><i class="fab fa-twitter"></i> Twitter</a>
+    </section>
+    <!-- Portfolio End -->
+    
+    <!-- Banner Start -->
+    <section id="offers" class="banner wow zoomIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>عرض رائع</p>
+                <h2>احصل على <span>30%</span> خصم</h2>
+            </div>
+            <div class="container banner-text">
+                <p>
+                    خصم 30% للأشخاص اللذين يقومون بمتابعتنا والتفاعل معنا على الإنستجرام والفيسبوك وتويتر
+                </p>
+                <a class="btn" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a class="btn" href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a class="btn" href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+    
+    <!-- Footer Start -->
+    <section id="contact" class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="container">
+            <div class="footer-info">
+                <h2>تواصل معنا</h2>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
-        
-        <!-- Banner End -->
-        
-        
-        <!-- Footer Start -->
-        <div id="contact" class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>تواصل معنا</h2>
-                        <div class="footer-social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <p>&copy; <a href="#">CV Mastermin</a>, كل الحقوق محفوظة | تصميم <a href="https://www.facebook.com/profile.php?id=61556487670336">CV Mastermin</a></p>
-                </div>
-            </div>
+        <div class="container copyright">
+            <p>&copy; <a href="#">CV Mastermind</a>, كل الحقوق محفوظة | تصميم <a href="https://www.facebook.com/profile.php?id=61556487670336">CV Mastermind</a></p>
         </div>
-        
-        <!-- Footer End -->
-        
-        
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
-        </div>
+    </section>
+    <!-- Footer End -->
+    
+    <!-- Back to top button -->
+    <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+    <!-- Template Javascript -->
+    <script>
+        // Typed.js Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('.typed-text', {
+                strings: [
+                    'نحن هنا لمساعدتكم في إنشاء سير ذاتية متميزة واحترافية',
+                    'تصميم سير ذاتية تناسب جميع المجالات',
+                    'أسعار تنافسية وجودة عالية'
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true
+            });
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.3)';
+                } else {
+                    document.querySelector('.navbar').style.boxShadow = 'none';
+                }
+            });
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+            // Back to top button
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    document.querySelector('.back-to-top').style.display = 'block';
+                } else {
+                    document.querySelector('.back-to-top').style.display = 'none';
+                }
+            });
+
+            document.querySelector('.back-to-top').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Initialize WOW.js
+            new WOW().init();
+        });
+    </script>
+    <script>
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                document.querySelector('.back-to-top').style.display = 'block';
+            } else {
+                document.querySelector('.back-to-top').style.display = 'none';
+            }
+        });
+        
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        </script>
+</body>
 </html>
